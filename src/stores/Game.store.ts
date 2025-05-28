@@ -82,7 +82,7 @@ export class GameStore {
 		if (!this.selectedCard) return;
 
 		const state =
-			this.selectedCard.pairId === card.pairId
+			this.selectedCard.pairId === card.pairId && this.selectedCard.id !== card.id
 				? CardState.Done
 				: CardState.Initial;
 
